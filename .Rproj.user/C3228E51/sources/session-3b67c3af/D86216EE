@@ -3,7 +3,7 @@
     "path": "~/Desktop/Wouldmates/Wouldmates/ui.R",
     "project_path": "ui.R",
     "type": "r_source",
-    "hash": "0",
+    "hash": "3028355772",
     "contents": "",
     "dirty": false,
     "created": 1736393691253.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "33,5",
-        "scrollLine": "0"
+        "cursorPosition": "31,0",
+        "scrollLine": "5"
     },
     "folds": "",
-    "lastKnownWriteTime": 1736413463,
+    "lastKnownWriteTime": 1736416293,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1736413463355,
+    "last_content_update": 1736416293618,
     "read_only": false,
     "read_only_alternatives": []
 }
