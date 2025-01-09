@@ -1,26 +1,36 @@
-# Load necessary packages
-library(lubridate)
+library(shiny)
 
 ui <- fluidPage(
-  tags$head(
-    tags$link(rel = "stylesheet", type = "text/css", href = "styles.css")
-  ),
-  titlePanel("Your Wouldmate Timeline"),
-  
-  # Sidebar layout
-  sidebarLayout(
-    sidebarPanel(
-      textInput("name", "What's your name?", value = ""),
-      dateInput("birth_date", "Date of Birth:", format = "yyyy-mm-dd"),
-      textInput("birth_time", "Time of Birth:", value = "12:00"),
-      textInput("birth_place", "Place of Birth (City, Country):", value = ""),
-      actionButton("generate", "Generate My Timeline!", icon = icon("star"))
+  tags$link(rel = "stylesheet", href = "https://fonts.googleapis.com/css2?family=Unica+One&display=swap"),
+  tags$link(rel = "stylesheet", type = "text/css", href = "styles.css"),
+  tags$h1("Your Wouldmate Timeline", class = "timeline-title"),
+  tags$div(
+    class = "input-box",
+    textInput(
+      "name",
+      "What do you call yourself?",
+      placeholder = "Your nickname or whatever!"
+    ),
+    tags$div(
+      "We don’t collect any data. This is just for fun and inspiration! 💫",
+      style = "color: #ffd700; font-size: 8px; text-align: center; margin-top: -10px; margin-bottom: 20px;"
     ),
     
-    mainPanel(
-      textOutput("greeting"),
-      plotOutput("timeline_plot"),
-      textOutput("positive_message")
+    dateInput("birth_date", "Date of Birth:", format = "yyyy-mm-dd"),
+    textInput("birth_time", "Time of Birth (24-hour format):", value = "12:00", placeholder = "e.g., 12:34"),
+    textInput(
+      "birth_place",
+      "Place of Birth (City, Country):",
+      placeholder = "Start typing a city name..."
+    ),
+    actionButton("generate", "Generate My Timeline!", icon = icon("star"), class = "generate-button"),
+    tags$div(
+      textOutput("location_details"), 
+      class = "location-details"
+    ),
+    tags$div(
+      class = "footer",
+      "Made with ❤️ by HollyTech. Bringing cosmic timelines to life!"
     )
   )
 )
